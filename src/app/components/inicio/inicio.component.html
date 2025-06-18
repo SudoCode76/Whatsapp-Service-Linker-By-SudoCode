@@ -1,40 +1,42 @@
 <app-nabvar></app-nabvar>
-<div class="flex items-center justify-center px-4 py-6 mt-4 md:mt-8">
-  <div class="card w-full max-w-xs sm:max-w-sm md:max-w-md bg-base-100 shadow-sm">
-    <div class="card-body">
-      <h2 class="text-center text-lg md:text-xl font-medium">Selecciona un servicio y manda el mensaje para la renovacion</h2>
+<div class="flex flex-col min-h-[calc(100vh-64px)] w-full">
+  <div class="container mx-auto px-4 py-6 flex items-center justify-center flex-1">
+    <div class="card w-full max-w-xs sm:max-w-sm md:max-w-md bg-base-100 shadow-sm">
+      <div class="card-body">
+        <h2 class="text-center text-lg md:text-xl font-medium">Selecciona un servicio y manda el mensaje para la renovación</h2>
 
-      <div class="mt-4">
-        <h2 class="text-base md:text-lg mb-2">Numero de telefono</h2>
-        <div class="flex items-center gap-2">
-          <label class="input input-bordered flex items-center flex-1">
-            <span class="label text-sm md:text-base">+591</span>
-            <input
-              type="text"
-              class="w-full focus:outline-none"
-              placeholder="62994685"
-              [(ngModel)]="numeroWhatsap" />
-          </label>
-          <button class="btn btn-square" (click)="pegarNumero()">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-            </svg>
-          </button>
+        <div class="mt-4">
+          <h2 class="text-base md:text-lg mb-2">Número de teléfono</h2>
+          <div class="flex items-center gap-2">
+            <label class="input input-bordered flex items-center flex-1">
+              <span class="label text-sm md:text-base">+591</span>
+              <input
+                type="text"
+                class="w-full focus:outline-none"
+                placeholder="62994685"
+                [(ngModel)]="numeroWhatsap" />
+            </label>
+            <button class="btn btn-square" (click)="pegarNumero()">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+              </svg>
+            </button>
+          </div>
         </div>
-      </div>
 
-      <div class="mt-4">
-        <h3 class="text-base md:text-lg mb-2">Selecciona el servicio</h3>
-        <select class="select select-bordered w-full" [(ngModel)]="servicioSeleccionado">
-          <option>ChatGPT Plus</option>
-          <option>Netflix</option>
-          <option>Spotify</option>
-        </select>
-      </div>
+        <div class="mt-4">
+          <h3 class="text-base md:text-lg mb-2">Selecciona el servicio</h3>
+          <select class="select select-bordered w-full" [(ngModel)]="servicioSeleccionado">
+            <option>ChatGPT Plus</option>
+            <option>Netflix</option>
+            <option>Spotify</option>
+          </select>
+        </div>
 
-      <button class="btn btn-success w-full mt-6" (click)="enviarMensaje()">
-        Enviar Mensaje
-      </button>
+        <button class="btn btn-success w-full mt-6" (click)="enviarMensaje()">
+          Enviar Mensaje
+        </button>
+      </div>
     </div>
   </div>
 </div>
