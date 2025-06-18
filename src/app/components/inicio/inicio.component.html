@@ -1,22 +1,33 @@
 <app-nabvar></app-nabvar>
-<div class="flex items-center justify-center mt-8">
-  <div class="card w-96 bg-base-100 shadow-sm">
+<div class="flex items-center justify-center px-4 py-6 mt-4 md:mt-8">
+  <div class="card w-full max-w-xs sm:max-w-sm md:max-w-md bg-base-100 shadow-sm">
     <div class="card-body">
-      <h2 class="text-center">Selecciona un servicio y manda el mensaje para la renovacion</h2>
-      <h2>Numero de telefono</h2>
-      <label class="input">
-        <span class="label">+591</span>
-        <input type="text" placeholder="62994685" [(ngModel)]="numeroWhatsap" /> <!-- Corregí el cierre del ngModel -->
-      </label>
-      <h3>Selecciona el servicio</h3>
+      <h2 class="text-center text-lg md:text-xl font-medium">Selecciona un servicio y manda el mensaje para la renovacion</h2>
 
-      <select class="select" [(ngModel)]="servicioSeleccionado"> <!-- Corregí el cierre del ngModel -->
-        <option>ChatGPT Plus</option>
-        <option>Netflix</option>
-        <option>Spotify</option>
-      </select>
+      <div class="mt-4">
+        <h2 class="text-base md:text-lg mb-2">Numero de telefono</h2>
+        <label class="input input-bordered w-full flex items-center">
+          <span class="label text-sm md:text-base">+591</span>
+          <input
+            type="text"
+            class="w-full focus:outline-none"
+            placeholder="62994685"
+            [(ngModel)]="numeroWhatsap" />
+        </label>
+      </div>
 
-      <button class="btn btn-soft btn-success mt-4" (click)="enviarMensaje()">Enviar Mensaje</button>
+      <div class="mt-4">
+        <h3 class="text-base md:text-lg mb-2">Selecciona el servicio</h3>
+        <select class="select select-bordered w-full" [(ngModel)]="servicioSeleccionado">
+          <option>ChatGPT Plus</option>
+          <option>Netflix</option>
+          <option>Spotify</option>
+        </select>
+      </div>
+
+      <button class="btn btn-success w-full mt-6" (click)="enviarMensaje()">
+        Enviar Mensaje
+      </button>
     </div>
   </div>
 </div>
