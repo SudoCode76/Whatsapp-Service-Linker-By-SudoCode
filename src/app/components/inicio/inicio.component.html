@@ -6,19 +6,17 @@
       <h2>Numero de telefono</h2>
       <label class="input">
         <span class="label">+591</span>
-        <input type="text" placeholder="62994685" />
+        <input type="text" placeholder="62994685" [(ngModel)]="numeroWhatsap" /> <!-- Corregí el cierre del ngModel -->
       </label>
       <h3>Selecciona el servicio</h3>
 
-      <select class="select">
+      <select class="select" [(ngModel)]="servicioSeleccionado"> <!-- Corregí el cierre del ngModel -->
         <option>ChatGPT Plus</option>
         <option>Netflix</option>
         <option>Spotify</option>
       </select>
 
-      <button class="btn btn-soft btn-success mt-4">Enviar Mensaje</button>
-
-
+      <button class="btn btn-soft btn-success mt-4" (click)="enviarMensaje()">Enviar Mensaje</button>
     </div>
   </div>
 </div>
