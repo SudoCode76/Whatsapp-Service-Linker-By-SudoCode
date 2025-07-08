@@ -16,9 +16,9 @@ export class InicioComponent {
   servicioSeleccionado: string = 'ChatGPT Plus';
 
   serviciosMensajes: { [key: string]: string } = {
-    'ChatGPT Plus': 'Hola, va renovar su suscripción a ChatGPT Plus.',
-    'Netflix': 'Hola, va renovar su suscripción a Netflix.',
-    'Spotify': 'Hola, va renovar su suscripción a Spotify.'
+    'ChatGPT Plus': 'Hola, va renovar su suscripción a ChatGPT Plus?',
+    'Netflix': 'Hola, va renovar su suscripción a Netflix?',
+    'Spotify': 'Hola, va renovar su suscripción a Spotify?'
   };
 
   // Método para enviar mensaje de WhatsApp
